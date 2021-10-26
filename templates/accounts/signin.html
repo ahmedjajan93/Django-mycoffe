@@ -34,7 +34,8 @@
             </div>
             <button type="submit" name="btnlogin" class="btn btn-warning">Login</button>
         </form>
-        <a href="{% url 'social:begin' 'facebook' %}" style="color: red;">Login with Facebook</a>
+        <h3>or</h3>
+        <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-warning" >Login with Facebook</a>
     </div>
 
     {% endblock body %}
