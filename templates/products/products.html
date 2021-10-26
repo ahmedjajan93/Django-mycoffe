@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+  
+
+    
+
+    <div class="my-form container p-5 my-5 rounded border border-warning">
+        <form > 
+            <h2 class="text-center">
+               Products 
+
+            </h2>
+            <hr>
+
+            <section>
+                <div class="container-fluid">
+                  <div class="row p-5" >
+                    {% for prod in products %}
+
+                    <div>
+                      <div class="card m-2" style="width: 18rem;">
+                        <img src="{{prod.photo.url}}" class="card-img-top" alt="prod.name">
+                        <div class="card-body">
+                          <h5 class="card-title">{{prod.name}}</h5>
+                          <p class="card-text text-truncate" >{{prod.des}}</p>
+                          <a href="#" class="btn btn-warning">Show Details</a>
+                        </div>
+                      </div>
+                    </div>
+        
+                    {% endfor %}
+                    
+                    
+            </section>
+        
+
+        </form>
+
+    </div>
+
+    {% endblock body %}
